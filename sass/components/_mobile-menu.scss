@@ -1,0 +1,115 @@
+.menu-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    background-color: transparent;
+    border: none;
+
+    margin-left: auto;
+    z-index: 1000;
+    position: relative;
+
+    @media screen and (min-width: 768px) {
+    display: none;
+    }
+}
+
+
+.menu-btn .menu__cross {
+    display: none;
+}
+.menu-btn.is-open .menu__cross {
+    display: block;
+}
+
+.menu-btn.is-open .menu__burger {
+    display: none;
+}
+.menu {
+    display: none;
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+    padding: 48px 83px 48px 40px;
+    
+    
+    opacity: 0;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+
+    &.is-open {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        opacity: 1;
+
+        width: 100%;
+        height: 100%;
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+    }
+    &-nav__link {
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 46.88px;
+        color:  #212121;
+        transition: color var(--animation);
+        &:hover, &:focus, &:active {
+            color: var(--accent-color)
+        }
+    }
+    &-contact__list {
+        margin-top: 302px;
+    }
+    &-contact__link {
+        text-decoration: none;
+        font-weight: 500;
+    }
+    &-contact__link--tel {
+        font-size: 34px;
+        line-height: 39.84px;
+        color: var(--accent-color);
+
+    }
+    &-contact__link--phone {
+        font-size: 24px;
+        line-height: 28.13px;
+        color: var(--title-text-color);
+    }
+    &-social__list {
+        display: inline-flex;
+        flex-wrap: nowrap;
+        margin-top: 64px;
+    }
+    &-social__link {
+        text-decoration: none;
+        color: var(--accent-color);
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        margin-right: 10px;
+    }
+    &-social__item:not(:last-child) {
+        margin-right: 10px;
+        border-right: 1px solid rgba(33, 33, 33, 0.2);;
+    }
+}
+
+.menu__button {
+    transition: fill var(--animation);
+    &:active,
+    &:focus,
+    &:hover {
+        fill: var(--accent-color);
+    }
+}
+
+
+

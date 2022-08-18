@@ -12,8 +12,17 @@
   .header__logo--secondary {
     color: #000000;
 }
+
 .footer__logo {
+  // @media screen and (min-width: 480px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  // }
+  @media screen and (min-width: 1200px) {
     margin-bottom: 20px;
+    display: inline;
+  }
 }
   .footer__logo-secondary {
     color: #ffffff;

@@ -31,11 +31,17 @@
     transform: translate(-50%, -50%) scale(1) rotate(0);
     opacity: 1;
     transition: transform var(--animation), opacity var(--animation);
-  
-    width: 528px;
-    height: 581px;
     background-color: #fff;
     border-radius: 4px;
+    width: 450px;
+    height: 609px;
+    
+    @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
+    
+    
   }
   .backdrop.backdrop.is-hidden .modal {
     opacity: 0;
@@ -116,13 +122,20 @@
   }
   
   .modal__group input {
-    width: 448px;
+    width: 100%;
     height: 40px;
+    @media screen and (min-width: 1200px) {
+    width: 448px;  
+    }
+        
   }
   .modal__group textarea {
-    width: 448px;
+    width: 100%;
     height: 120px;
     padding: 16px 12px;
+    @media screen and (min-width: 1200px) {
+      width: 448px;  
+    }
   }
   .reg__form {
     margin: auto;
@@ -132,7 +145,11 @@
     text-align: center;
     line-height: 1.71;
     user-select: none;
+    font-size: 12px;
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
   }
+}
   
   .reg__checkbox:checked + .reg__icon .reg__icon-uncheck {
     opacity: 0;
@@ -200,7 +217,7 @@
     
     &::placeholder {
       font-family: "Roboto";
-      font-size: 14px;
+      font-size: 12px;
       line-height: calc(16px\14px);
       letter-spacing: 0.01em;
     }

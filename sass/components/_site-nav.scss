@@ -5,10 +5,14 @@
 }
   
 .site-nav {
-display: flex;
+display: none;
 font-weight: 500;
 letter-spacing: 0.02em;
 color: var(--primary-text-color);
+
+@media screen and (min-width: 768px) {
+    display: flex
+    }
 
     &__link {
         position: relative;

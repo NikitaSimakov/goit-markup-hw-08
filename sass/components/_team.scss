@@ -1,24 +1,18 @@
 .team {
     background-color: #f5f4fa;
-    padding-bottom: 94px;
-    padding-top: 94px;
+    padding-bottom: 60px;
+    padding-top: 60px;
 
     &__title {
         margin-bottom: 50px;
       
         font-weight: 700;
-        font-size: 36px;
-        line-height: 1.16;
+        font-size: 28px;
+        line-height: 1.18;
         color: var(--primary-text-color);
         text-align: center;
     }
-    &__list {
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-    }
+
     &__border {
         padding-top: 30px;
         padding-bottom: 30px;
@@ -26,10 +20,10 @@
           0px 2px 1px rgba(0, 0, 0, 0.2);
         border-radius: 0px 0px 4px 4px;
         background: #ffffff;
+
+        text-align: center;
     }
-    &__item:not(:first-child) {
-        margin-left: 30px;
-    }
+  
     &__title-name {
         margin-bottom: 10px;
       
@@ -43,4 +37,55 @@
         line-height: 1.18;
         color: var(--title-text-color);
     }
+    
+        &__item:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    
+    @media screen and (min-width: 768px) {
+        &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;   
+        align-items: normal; 
+               
+        }
+        &__item {
+        width: calc((100% - 4 * 15px) / 2);
+        margin: 15px;
+        }
+    }
+    @media screen and (min-width: 1200px) {
+    padding-bottom: 94px;
+    padding-top: 94px;
+    &__list {
+        display: flex;
+        flex-wrap: nowrap;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    &__item {
+        width: 270px;
+        margin: 0px;
+    }
+    &__item:not(:last-child) {
+        margin-bottom: 0px;
+    }
+    &__title {
+        margin-bottom: 50px;
+      
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.16;
+        color: var(--primary-text-color);
+        text-align: center;
+    }
+    &__item:not(:first-child) {
+        margin-left: 30px;
+    }
+    }
+}
+.portfolio-img {
+    width: 100%;
 }
