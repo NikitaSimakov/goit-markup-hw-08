@@ -1,0 +1,132 @@
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  
+    background: #2f303a;
+}
+
+.address__link {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.71;
+  
+    display: block;
+    text-decoration: none;
+  
+    transition: color var(--animation);
+    
+    &--map {
+    color: #ffffff;
+    line-height: 1.71;
+    }
+    &:hover,
+    &:focus {
+    color: var(--accent-color);
+    }
+}
+  
+
+.address__item {
+    font-style: normal;
+    margin-bottom: 0;
+}
+.address__item:not(:first-child) {
+    margin-top: 9px;
+}
+  
+.footer__item {
+    width: 231px;
+}
+.footer__address {
+    margin-top: 20px;
+}
+  
+.footer__list {
+    display: inline-flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.footer__button {
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 44px;
+    height: 44px;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    transition: background-color var(--animation);
+    &:hover {
+        background-color: var(--accent-color);
+        cursor: pointer;
+    }
+    &:hover svg {
+        fill: #ffffff;
+    }
+    &:focus {
+        background-color: var(--accent-color);
+        cursor: pointer;
+    }
+    &:focus svg {
+        fill: #ffffff;
+    }
+}
+    
+  /* Footer send block */
+  
+.footer__input-form {
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: #2f303a;
+    color: #ffffff;
+    padding-left: 10px;
+}
+  
+.footer__send-item {
+    margin-left: 93px;
+}
+  
+.footer__send-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+}
+  
+.footer__send-button {
+    display: flex;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 12px;
+  
+    font-family: "Roboto", "sans-sarif";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(30 / 16);
+    letter-spacing: 0.06em;
+    color: #ffffff;
+  
+    background-color: #2196f3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+  
+    cursor: pointer;
+}
+  
+.footer__send-icon {
+    margin-left: 10px;
+    /* display: inline-flex; */
+    fill: #ffffff;
+    justify-content: center;
+    align-items: center;
+}
