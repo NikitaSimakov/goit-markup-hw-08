@@ -27,7 +27,8 @@
   // desktop screen
   @media screen and (min-width: 1200px) {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/hero/img-lg@1x.png');
-
+    padding-top: 200px;
+    padding-bottom: 200px;
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/hero/img-lg@2x.png');
     }
@@ -57,11 +58,11 @@
   
     font-family: "Roboto", sans-serif;
     min-width: 200px;
-    height: 50px;
+    // height: 50px;
     background: var(--accent-color);
     font-weight: 700;
     font-size: 16px;
-    line-height: 1.87;
+    line-height: calc(30 / 16);
     text-align: center;
     cursor: pointer;
     color: #ffffff;

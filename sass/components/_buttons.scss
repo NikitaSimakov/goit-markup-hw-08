@@ -14,8 +14,11 @@
     font-size: 16px;
     line-height: 1.62;
     text-align: center;
+    letter-spacing: 0.03em;
+    
     min-width: 73px;
     min-height: 38px;
+    
     border-color: transparent;
     border: none;
   
@@ -44,12 +47,12 @@
     // }
   }
   
-  .portfolio__button-item {
-    margin-right: 8px;
-  }
-  .portfolio__button-item:not(:last-child) {
-    margin-right: 8px;
-  }
+  // .portfolio__button-item {
+  //   margin-right: 8px;
+  // }
+  // .portfolio__button-item:not(:last-child) {
+  //   margin-right: 8px;
+  // }
   
 
   .button__list {
@@ -66,13 +69,13 @@
     margin-bottom: 30px;
     flex-wrap: nowrap;
     row-gap: 0;
-    column-gap: 0;
+    column-gap: 8;
     justify-content: center;      
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1200px) {
       // margin-top: 94px;
-      margin-bottom: 48px;
+      margin-bottom: 50px;
     }
   }
   
