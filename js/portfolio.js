@@ -1,7 +1,8 @@
 import { portfolioData } from "./portfolioData.js";
 
 const workList = document.querySelector("[data-work-list]");
-const buttonList = document.querySelector(".button__list");
+const portfolioButton = document.querySelector(".button__list");
+const buttonsList = document.querySelectorAll(".portfolio__button");
 
 const filteredPortfolio = (type = "Все") =>
   portfolioData.filter((card, _, array) => {
@@ -11,7 +12,8 @@ const filteredPortfolio = (type = "Все") =>
     return card.desc === type;
   });
 
-let staticMarkup = filteredPortfolio("Все");
+let staticMarkup = filteredPortfolio();
+
 const markup = (array = portfolioData) => {
   return (staticMarkup = array
     .map(
@@ -47,12 +49,17 @@ const markup = (array = portfolioData) => {
 markup();
 
 const handleButtonClick = (event) => {
-  if (event.target.nodeName !== "BUTTON") return;
+  const { nodeName, innerText, className } = event.target;
+  if (nodeName !== "BUTTON") return;
   workList.innerHTML = "";
-  const filteredArr = filteredPortfolio(event.target.innerText);
-  staticMarkup = markup(filteredArr);
-  workList.insertAdjacentHTML("beforeend", staticMarkup);
-  return staticMarkup;
+  const filteredArr = filteredPortfolio(innerText);
+  workList.insertAdjacentHTML("beforeend", markup(filteredArr));
+
+  buttonsList.forEach((button) => {
+    if (button.className === "portfolio__button active")
+      button.classList.remove("active");
+  });
+  event.target.className += " active";
 };
-buttonList.addEventListener("click", handleButtonClick);
+portfolioButton.addEventListener("click", handleButtonClick);
 workList.insertAdjacentHTML("beforeend", staticMarkup);
