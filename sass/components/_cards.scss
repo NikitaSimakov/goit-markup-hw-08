@@ -15,12 +15,8 @@
     @media screen and (min-width: 768px) {
       display: flex;
       flex-wrap: wrap;
-        
+      gap: 30px;
       align-items: normal; 
-    }
-    @media screen and (min-width: 1200px) {
-      // margin: -15px; 
-      background-color: red;
     }
   }
   
@@ -46,30 +42,16 @@
     }
     max-width: 450px;
 
-    @media screen and (min-width: 768px) {
-      width: calc((100% - 4 * 15px) / 2);
-      margin: 15px;
-      margin-top: 0;
-    &:last-child {
-      margin-left: 15px;
-      margin-right: auto;
-      margin-bottom: 0;
+    @media screen and (max-width: 767.98px) {
+      &:last-child {margin-bottom: 0;}
     }
+
+    @media screen and (min-width: 768px) {
+      margin: 0;
+      flex-basis: calc((100% - 2 * 15px) / 2);
     }
     @media screen and (min-width: 1200px) {
-      width: calc((100% - 60px) / 3);
-      margin: 15px;
-      margin-right: 30px;
-      margin-left: 0;
-      margin-top: 0;
-      &:nth-child(3n) {
-        margin-right: 0;
-      }
-      &:last-child {
-        margin-left: 0;
-        margin-right: 0;
-      }
-      
+      flex-basis: calc((100% - 60px) / 3);
     }
   }
 
